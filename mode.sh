@@ -8,4 +8,4 @@ export OVERLAY_MODE=0
 export OVERLAY_LEGACY_MOUNT=false
 
 # If you are using KernelSU, set this to true to unmount KernelSU overlayfs
-export DO_UNMOUNT_KSU=false
+export DO_UNMOUNT_KSU=true
