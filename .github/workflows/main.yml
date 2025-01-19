@@ -1,0 +1,25 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Android NDK
+      run: |
+        wget https://dl.google.com/android/repository/android-ndk-r23b-linux.zip
+        unzip android-ndk-r23b-linux.zip
+
+    - name: Run build script
+      run: bash build.sh
